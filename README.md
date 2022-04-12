@@ -15,5 +15,9 @@ python wsj0_convert.py <path-to-WSJ0> <output-dir>
 This will create an `audio` directory inside `<output-dir>` containing all the audio files in `.flac` format,
 or in `.wav` format if using the `--no-flac` option.
 The audio files are organized in sub-directories by speakers.
-An extra file `metadata.json` is created in `<output-dir>` compiling all the metadata obtained from the file headers.
-For extra speaker information (e.g. gender), see [here](https://catalog.ldc.upenn.edu/docs/LDC93S6A/).
+
+# Notes
+- Only `.wv1` files are converted. `.wv2` files are skipped.
+- The original folder structure is not respected. Output files are organized in sub-directories by speaker.
+- Total output size if 3.9 GB when using `.flac` format.
+- For extra speaker information (e.g. gender), see [here](https://catalog.ldc.upenn.edu/docs/LDC93S6A/).
